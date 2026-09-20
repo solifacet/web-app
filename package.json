@@ -3,7 +3,6 @@
 	"version": "0.1.0",
 	"description": "Solifacet — Curated online marketplace for fine jewelry and precious stones. Every facet, verified.",
 	"private": true,
-	"packageManager": "pnpm",
 	"dependencies": {
 		"react": "latest",
 		"react-dom": "latest",
