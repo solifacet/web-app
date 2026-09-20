@@ -1,5 +1,10 @@
 import type { Metadata, Viewport } from "next";
 import "./globals.css";
+import { Geist } from "next/font/google";
+import { cn } from "@/lib/utils";
+import { TooltipProvider } from "@/components/ui/tooltip";
+
+const geist = Geist({ subsets: ["latin"], variable: "--font-sans" });
 
 export const viewport: Viewport = {
   themeColor: "#121110",
@@ -85,13 +90,13 @@ const jsonLd = {
     {
       "@type": "Organization",
       "@id": "https://solifacet.com/#organization",
-      "name": "Solifacet",
-      "url": "https://solifacet.com",
-      "logo": "https://solifacet.com/icon.svg",
-      "slogan": "Every facet, verified.",
-      "description":
+      name: "Solifacet",
+      url: "https://solifacet.com",
+      logo: "https://solifacet.com/icon.svg",
+      slogan: "Every facet, verified.",
+      description:
         "A curated online marketplace for authenticated fine jewelry and precious stones.",
-      "knowsAbout": [
+      knowsAbout: [
         "Fine Jewelry",
         "Precious Stones",
         "Gemstone Authentication",
@@ -102,11 +107,11 @@ const jsonLd = {
     {
       "@type": "WebSite",
       "@id": "https://solifacet.com/#website",
-      "url": "https://solifacet.com",
-      "name": "Solifacet",
-      "description":
+      url: "https://solifacet.com",
+      name: "Solifacet",
+      description:
         "Curated online marketplace for fine jewelry and precious stones.",
-      "publisher": {
+      publisher: {
         "@id": "https://solifacet.com/#organization",
       },
     },
@@ -117,7 +122,7 @@ export default function RootLayout({
   children,
 }: Readonly<{ children: React.ReactNode }>) {
   return (
-    <html lang="en" className="dark">
+    <html lang="en" className={cn("dark", "font-sans", geist.variable)}>
       <head>
         <script
           type="application/ld+json"
@@ -125,7 +130,7 @@ export default function RootLayout({
         />
       </head>
       <body className="bg-[#121110] text-[#F3F0EA] antialiased selection:bg-[#C9A876] selection:text-[#121110]">
-        {children}
+        <TooltipProvider>{children}</TooltipProvider>
       </body>
     </html>
   );
