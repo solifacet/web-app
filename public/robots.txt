@@ -1,0 +1,8 @@
+# Solifacet — Robots Configuration
+# Every facet, verified. https://solifacet.com
+
+User-agent: *
+Allow: /
+
+# Sitemaps
+Sitemap: https://solifacet.com/sitemap.xml

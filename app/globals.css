@@ -1,17 +1,61 @@
 @import "tailwindcss";
 
+@layer base {
+  :root {
+    --background: #121110;
+    --card: #171512;
+    --card-foreground: #F3F0EA;
+    --popover: #171512;
+    --popover-foreground: #F3F0EA;
+    --primary: #C9A876;
+    --primary-foreground: #121110;
+    --secondary: #1E1C19;
+    --secondary-foreground: #F3F0EA;
+    --muted: #1E1C19;
+    --muted-foreground: #B8B4AC;
+    --accent: #242019;
+    --accent-foreground: #F3F0EA;
+    --destructive: #B4544A;
+    --destructive-foreground: #F3F0EA;
+    --border: #2A2723;
+    --input: #1E1C19;
+    --ring: #C9A876;
+    --verified-badge: #2C5D5C;
+    --tag-border: #5A5468;
+    --radius: 0.3rem;
+
+    color-scheme: dark;
+  }
+}
+
 :root {
-  color-scheme: light;
-  background: #f8fafc;
-  color: #111827;
-  font-family:
-    Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  background-color: #121110;
+  color: #F3F0EA;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 body {
   margin: 0;
+  background-color: #121110;
+  color: #F3F0EA;
+  min-height: 100vh;
 }
 
 a {
   color: inherit;
+  text-decoration: none;
+}
+
+/* Editorial Serif and Tracked Uppercase Styles */
+.font-editorial {
+  font-family: "Playfair Display", "Didot", "Bodoni MT", "Georgia", serif;
+}
+
+.wordmark {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  font-weight: 500;
 }
